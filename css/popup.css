@@ -1,0 +1,181 @@
+header {
+  font-family: sans-serif;
+  display: inline-flex;
+  align-items: center;
+  margin-top : 8px;
+  cursor : pointer;
+}
+
+#header-title {
+  color: #4B4BA4;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: lowercase;
+  word-wrap: break-word;
+  padding-left: 5px;
+}
+
+body {
+  width: 300px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+main {
+  height : 200px;
+  position: relative;
+}
+
+.main-initial {
+  display: flex;
+  align-items: end;
+}
+
+hr {
+  border: 1px #E4E4E7 solid;
+}
+
+#slime-icon {
+  position : relative;
+  z-index: 1;
+}
+
+#speech-bubble {
+  position: absolute;
+  top : 30px;
+  left: 65px;
+}
+
+ul {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+footer {
+  padding-top: 4px;
+  margin-bottom: 8px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+
+#resume-upload-btn {
+  text-align: center;
+  color: #3F3F46;
+  font-size: 14px;
+  font-weight: 500;
+  word-wrap: break-word;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+#resume-storage-btn {
+  text-align: center;
+  color: #4B4BA4;
+  font-size: 14px;
+  font-weight: 500;
+  word-wrap: break-word;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.inactive {
+  display: none;
+}
+
+button {
+  all : unset;
+}
+
+li {
+  list-style: none;
+}
+
+#upload-resume {
+  padding: 20px;
+}
+
+#resume-form {
+  display: grid;
+}
+
+#resume-form select {
+  border: 1px #A1A1AA solid;
+  border-radius: 4px;
+  outline: none;
+}
+
+#resume-form select:hover {
+  border : 1px #52525B solid;
+  outline: 1px #52525B solid;
+}
+
+#resume-submit-btn {
+  cursor: pointer;
+  width: fit-content;
+}
+
+#resume-list {
+  height: 180px;
+  overflow-y: scroll;
+  margin-bottom: 8px;
+  margin-block-start: 8px;
+}
+
+.resume-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 35px;
+  background: rgba(233, 233, 255, 0.4);
+  border-radius: 10px;
+  border: 1px #e9e9ff solid;
+  margin-bottom: 10px;
+}
+
+.resume-list-item div {
+  position: relative;
+  color: black;
+  width: 72px;
+  font-size: 12px;
+  font-weight: 500;
+  word-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button-container {
+  display: flex;
+}
+
+.resume-list-item-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 43px;
+  height: 15px;
+  background: #8787f2;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.resume-list-item-btn text {
+  color: white;
+  font-size: 10px;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+#submit-complete {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#submit-complete span {
+  margin-top: 10px;
+}

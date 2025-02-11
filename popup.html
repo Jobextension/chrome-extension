@@ -1,0 +1,75 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/popup.css">
+  </head>
+  <body>
+    <header id="header">
+      <img src="images/icon-128.png" alt="아이콘" height="32" width="32">
+      <div id="header-title">jobxtension</div>
+    </header>
+    <hr>
+    <main class="main-initial">
+      <div id="initial-page">
+        <img id = "slime-icon" src="images/slime.svg" alt="SVG Image" width="80" height="80">
+        <svg id ="speech-bubble" xmlns="http://www.w3.org/2000/svg" width="204" height="96" viewBox="0 0 204 96" fill="none">
+          <rect x="0.000244141" width="204" height="76.3251" rx="10" fill="#F5F5F5"/>
+          <path d="M10.6134 88.4862C10.1038 89.038 9.18082 88.4327 9.09364 87.4896L7.11777 66.1142C7.04342 65.3098 7.65348 64.8487 8.26313 65.2485L21.7895 74.1183C22.3991 74.518 22.5986 75.51 22.1639 75.9806L10.6134 88.4862Z" fill="#F5F5F5"/>
+          <text x="100" y="35" fill="black" font-size="14" text-anchor="middle" alignment-baseline="middle">
+            <tspan x="102" dy="0">문항별 자소서를 업로드!</tspan>
+            <tspan x="102" dy="18">키워드에 맞는 자소서 탐색</tspan>
+          </text>
+        </svg>
+      </div>
+      <div id="upload-resume" class="inactive">
+        <form id="resume-form">
+          <!-- 가장 기본적인 select 형태, option의 value값이 없으면 표현값이 value 대체됨-->
+          <label for="jobCategory">직무</label>
+          <select name="jobCategory" id="jobCategory" required>
+            <option value="" disabled selected>직무를 선택하세요</option>
+            <option value="IT">IT</option>
+            <option value="logistics">유통</option>
+            <option value="trade">무역</option>
+          </select>
+          <label for="question">자소서 질문</label>
+          <input id="question" type="text" name="question" required>
+          <label for="answer">답변</label>
+          <input id="answer" type="text" name="answer" required>
+          <button id="resume-submit-btn" type="submit">업로드</button>
+        </form>
+      </div>
+      <div id="submit-complete" class="inactive">
+        <svg width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30.4825 0C13.647 0 0 13.6549 0 30.5C0 47.3451 13.647 61 30.4825 61C45.9676 61 58.9653 49.3856 60.776 34.1234C60.9711 32.4489 59.7792 30.8904 58.1057 30.6891C56.4353 30.4939 54.8746 31.6864 54.6795 33.3609C53.2316 45.5609 42.8706 54.9 30.4825 54.9C17.0153 54.9 6.0965 43.9749 6.0965 30.5C6.0965 17.0251 17.0153 6.1 30.4825 6.1C33.296 6.1 36.0821 6.60933 38.6762 7.53043C40.2613 8.09163 41.9226 7.21018 42.4865 5.62418C43.0474 4.03513 42.2609 2.27839 40.6758 1.71414C37.4325 0.564286 33.991 0 30.4825 0ZM57.9167 6.1C57.1364 6.1 56.3195 6.37452 55.725 6.95707L29.1473 33.1687C28.3639 33.9404 27.5744 33.791 26.9587 32.8821L23.9104 28.4016C22.9777 27.0261 21.0207 26.6265 19.6246 27.5446C18.2255 28.4626 17.8323 30.3628 18.765 31.7383L21.8133 36.2187C24.5598 40.2722 29.9338 40.809 33.4362 37.3625L60.1084 11.2484C61.2972 10.0772 61.2972 8.12827 60.1084 6.95707C59.514 6.37147 58.6971 6.1 57.9167 6.1Z" fill="#25E66C"/>
+        </svg>
+        <span>
+          제출 완료
+        </span>
+      </div>
+      <div id="my-resume" class="inactive">
+        <div style="color: black; font-size: 10px;font-weight: 600; word-wrap: break-word; margin-left: 4px">내 자소서 목록</div>
+        <ul id="resume-list">
+        </ul>
+      </div>
+    </main>
+    <hr>
+    <footer>
+      <button id="resume-upload-btn">
+        <svg width="9" height="10" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.89478 4.50004H4.50004M4.50004 4.50004H7.1053M4.50004 4.50004V1.89478M4.50004 4.50004V7.1053" stroke="#3F3F46" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="4.5" cy="4.5" r="4.25" stroke="#3F3F46" stroke-width="0.5"/>
+        </svg>
+        업로드하기
+      </button>
+      <button id="resume-storage-btn">
+        <svg width="9" height="10" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path id="Vector" d="M4 0L0 3V9H2.5V5.5H5.5V9H8V3L4 0Z" fill="#4B4BA4"/>
+        </svg>
+        자소서 보관함
+      </button>
+    </footer>
+  </body>
+  <script src="scripts/footer.js"></script>
+  <script src="scripts/main.js"></script>
+</html>
