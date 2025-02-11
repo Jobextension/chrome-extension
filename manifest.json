@@ -22,7 +22,7 @@
     }
   },
   "background" : {
-    "service_worker" :"scripts/service-worker.js"
+    "service_worker" :"dist/bundle.js"
   },
   "content_scripts": [
     {
