@@ -1,0 +1,7 @@
+#extension-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 999999;
+}

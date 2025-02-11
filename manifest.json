@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Jobextension",
+  "version": "1.0",
+  "description": "Displays an icon when you select the text!!!",
+  "permissions": ["scripting"],
+  "host_permissions": ["<all_urls>"],
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "action": {
+    "default_title": "Jobxtension 자소서 도우미",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png",
+      "48": "images/icon-48.png",
+      "128": "images/icon-128.png"
+    }
+  },
+  "background" : {
+    "service_worker" :"scripts/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/content.js"],
+      "css": ["css/icon.css"],
+      "resources": ["images/*"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["images/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
