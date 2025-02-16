@@ -1,3 +1,5 @@
+import {axiosInstance} from "./axiosConfig";
+
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === "SEND_TEXT_TO_BACKEND") {
     const {text} = message.payload;
@@ -26,13 +28,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === "SEND_RESUME_TO_BACKEND") {
     const jsonData = message.payload;
 
-    fetch("http://localhost:3000/api/user/resume", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: jsonData,
-    })
+    axiosInstance.post('/user/resume',jsonData)
       .then((response) => response.text())
       .then((data) => {
         console.log("Data from backend:", data);
